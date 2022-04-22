@@ -1,5 +1,6 @@
 import React from "react";
+import Nav from "./components/Nav";
 
 export default function App() {
-  return <h1 className="text-center">Hello</h1>;
+  return <Nav />;
 }

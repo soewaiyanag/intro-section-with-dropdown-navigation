@@ -10,7 +10,7 @@ module.exports = {
   },
   devServer: {
     port: 3000,
-    static: "./",
+    static: "./src",
   },
   module: {
     rules: [
@@ -24,6 +24,10 @@ module.exports = {
       {
         test: /css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)/i,
+        loader: "file-loader",
       },
     ],
   },
