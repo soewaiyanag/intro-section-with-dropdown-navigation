@@ -10,7 +10,14 @@ module.exports = {
   },
   devServer: {
     port: 3000,
-    static: "./src",
+    static: path.join(__dirname, "public"),
+  },
+  resolve: {
+    extensions: [".js", ".jsx", "json"],
+    alias: {
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@images": path.resolve(__dirname, "src/images/"),
+    },
   },
   module: {
     rules: [
@@ -33,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: path.join(__dirname, "public", "index.html"),
     }),
     new MiniCssExtractPlugin({
       filename: "styles.css",
