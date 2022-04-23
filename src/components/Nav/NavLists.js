@@ -6,8 +6,8 @@ import FeaturesLists from "./FeaturesLists";
 const NavLists = () => {
   return (
     <ul
-      className="fixed inset-0 left-auto bg-white
-                w-44 pl-4 pt-20 space-y-4 
+      className="select-none fixed inset-0 left-auto bg-white
+                w-56 pl-4 pt-20 space-y-4 
                 md:static md:p-0 md:space-y-0 md:w-full
                 md:flex md:items-center"
     >

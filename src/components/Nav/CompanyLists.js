@@ -6,7 +6,11 @@ const CompanyLists = () => {
   return (
     <ul className="space-y-4">
       {companyItems.map((companyItem) => {
-        return <li>{companyItem}</li>;
+        return (
+          <li key={"key-" + companyItem}>
+            <a href="#">{companyItem}</a>
+          </li>
+        );
       })}
     </ul>
   );
