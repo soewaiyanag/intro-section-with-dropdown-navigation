@@ -8,7 +8,7 @@ const Dropdown = ({ label, lists }) => {
         {label}
         <img src={arrow} alt="arrow icon" />
       </li>
-      {lists}
+      <div className="pl-6">{lists}</div>
     </>
   );
 };

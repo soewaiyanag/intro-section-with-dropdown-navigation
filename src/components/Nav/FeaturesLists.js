@@ -24,7 +24,7 @@ const featuresItems = [
 ];
 
 const FeatureList = ({ name, icon }) => (
-  <li className="items-center grid grid-cols-[1.2rem_1fr] pl-4">
+  <li className="items-center grid grid-cols-[1.2rem_1fr]">
     <img className="justify-self-center" src={icon} alt="icon" />
     <a className="ml-3" href="#">
       {name}
@@ -34,7 +34,7 @@ const FeatureList = ({ name, icon }) => (
 
 const FeaturesLists = () => {
   return (
-    <ul>
+    <ul className="space-y-4">
       {featuresItems.map((featuresItem) => {
         return (
           <FeatureList
