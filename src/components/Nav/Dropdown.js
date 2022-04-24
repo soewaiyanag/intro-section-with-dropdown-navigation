@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import arrow from "@images/icon-arrow-down.svg";
+import DropdownLists from "./DropdownLists";
 
 const Dropdown = ({ label, lists }) => {
   const [showDropdown, setShowDropdown] = useState(false);
+
   return (
-    <>
+    <div className="relative space-y-4 md:space-y-0">
       <li
         className="flex items-center gap-2.5 cursor-pointer"
         onClick={() => {
@@ -14,8 +16,8 @@ const Dropdown = ({ label, lists }) => {
         {label}
         <img src={arrow} alt="arrow icon" />
       </li>
-      {showDropdown && <div className="pl-6">{lists}</div>}
-    </>
+      {showDropdown && <DropdownLists lists={lists} />}
+    </div>
   );
 };
 

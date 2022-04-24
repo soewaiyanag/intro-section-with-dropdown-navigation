@@ -4,7 +4,7 @@ const companyItems = ["History", "Our Team", "Blog"];
 
 const CompanyLists = () => {
   return (
-    <ul className="space-y-4">
+    <ul className="space-y-4 min-w-max">
       {companyItems.map((companyItem) => {
         return (
           <li key={"key-" + companyItem}>
