@@ -2,14 +2,22 @@ import React from "react";
 import CompanyLists from "./CompanyLists";
 import Dropdown from "./Dropdown";
 import FeaturesLists from "./FeaturesLists";
+import { motion } from "framer-motion";
+import clsx from "clsx";
 
-const NavLists = () => {
+const NavLists = ({ showNavLists }) => {
+  const show = "translate-x-0";
+  const hide = "translate-x-full";
+
   return (
     <ul
-      className="select-none fixed inset-0 left-auto bg-white
-                w-56 pl-4 pt-20 space-y-4 
-                md:static md:p-0 md:space-y-0 md:w-full
-                md:flex md:items-center"
+      className={clsx(
+        "select-none fixed inset-0 left-auto -right-10",
+        "bg-white w-64 pl-4 pt-20 space-y-4 transition-transform",
+        "md:static md:p-0 md:space-y-0 md:w-full md:transition-none",
+        "md:flex md:items-center md:translate-x-0",
+        showNavLists ? show : hide
+      )}
     >
       <Dropdown label={"Features"} lists={<FeaturesLists />} />
       <Dropdown label={"Company"} lists={<CompanyLists />} />
