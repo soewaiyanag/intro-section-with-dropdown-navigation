@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import arrow from "@images/icon-arrow-down.svg";
 import DropdownLists from "./DropdownLists";
+import clsx from "clsx";
 
 const Dropdown = ({ label, Lists }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -14,7 +15,14 @@ const Dropdown = ({ label, Lists }) => {
         }}
       >
         {label}
-        <img src={arrow} alt="arrow icon" />
+        <img
+          className={clsx(
+            "transition-transform",
+            showDropdown ? "rotate-180" : "rotate-0"
+          )}
+          src={arrow}
+          alt="arrow icon"
+        />
       </li>
       <DropdownLists
         Lists={Lists}

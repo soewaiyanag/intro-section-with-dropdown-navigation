@@ -8,7 +8,12 @@ const DropdownLists = ({ Lists, showDropdown, setShowDropdown }) => {
 
   useOnClickOutside(ref, () => {
     if (showDropdown) {
-      setShowDropdown(false);
+      // without seTimeout it causing bug
+      // which is if one dropdown is active
+      // and click to other dropdown, it doesn't open but close the one that active
+      setTimeout(() => {
+        setShowDropdown(false);
+      }, 100);
     }
   });
 
