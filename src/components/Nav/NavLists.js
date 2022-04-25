@@ -2,7 +2,6 @@ import React from "react";
 import CompanyLists from "./CompanyLists";
 import Dropdown from "./Dropdown";
 import FeaturesLists from "./FeaturesLists";
-import { motion } from "framer-motion";
 import clsx from "clsx";
 
 const NavLists = ({ showNavLists }) => {
@@ -19,8 +18,8 @@ const NavLists = ({ showNavLists }) => {
         showNavLists ? show : hide
       )}
     >
-      <Dropdown label={"Features"} lists={<FeaturesLists />} />
-      <Dropdown label={"Company"} lists={<CompanyLists />} />
+      <Dropdown label={"Features"} Lists={<FeaturesLists />} />
+      <Dropdown label={"Company"} Lists={<CompanyLists />} />
       <li>
         <a href="#">Careers</a>
       </li>
