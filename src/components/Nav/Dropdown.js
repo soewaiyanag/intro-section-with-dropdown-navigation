@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import arrow from "@images/icon-arrow-down.svg";
 import DropdownLists from "./DropdownLists";
 
@@ -16,7 +16,11 @@ const Dropdown = ({ label, Lists }) => {
         {label}
         <img src={arrow} alt="arrow icon" />
       </li>
-      <DropdownLists Lists={Lists} showDropdown={showDropdown} />
+      <DropdownLists
+        Lists={Lists}
+        showDropdown={showDropdown}
+        setShowDropdown={setShowDropdown}
+      />
     </div>
   );
 };

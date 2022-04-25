@@ -20,11 +20,16 @@ const NavLists = ({ showNavLists }) => {
     >
       <Dropdown label={"Features"} Lists={<FeaturesLists />} />
       <Dropdown label={"Company"} Lists={<CompanyLists />} />
-      <li>
-        <a href="#">Careers</a>
+      <li className="flex">
+        {/* flex && w-full to take full width  */}
+        <a className="w-full" href="#">
+          Careers
+        </a>
       </li>
-      <li>
-        <a href="#">About</a>
+      <li className="flex">
+        <a className="w-full" href="#">
+          About
+        </a>
       </li>
     </ul>
   );

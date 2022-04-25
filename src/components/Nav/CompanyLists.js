@@ -8,7 +8,9 @@ const CompanyLists = () => {
       {companyItems.map((companyItem) => {
         return (
           <li key={"key-" + companyItem}>
-            <a href="#">{companyItem}</a>
+            <a className="w-full" href="#">
+              {companyItem}
+            </a>
           </li>
         );
       })}

@@ -26,7 +26,7 @@ const featuresItems = [
 const FeatureList = ({ name, icon }) => (
   <li className="items-center grid grid-cols-[1.2rem_1fr]">
     <img className="justify-self-center" src={icon} alt="icon" />
-    <a className="ml-3" href="#">
+    <a className="ml-3 w-full" href="#">
       {name}
     </a>
   </li>
