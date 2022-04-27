@@ -1,4 +1,5 @@
 import React from "react";
+import Clients from "./Clients";
 
 const Texts = () => {
   return (
@@ -19,6 +20,7 @@ const Texts = () => {
       >
         Learn more
       </a>
+      <Clients />
     </div>
   );
 };
