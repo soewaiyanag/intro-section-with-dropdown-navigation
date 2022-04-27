@@ -4,7 +4,7 @@ const Texts = () => {
   return (
     <div
       className="px-4 text-center flex flex-col items-center gap-5
-                w-1/2 sm:-order-1 sm:text-left sm:items-start"
+                sm:w-1/2 sm:-order-1 sm:text-left sm:items-start"
     >
       <h1 className="text-3xl font-bold sm:text-6xl">Make remote work</h1>
       <p className="text-medium-grey text-base">

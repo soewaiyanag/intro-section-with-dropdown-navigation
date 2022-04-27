@@ -1,7 +1,14 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+let containerScreens = { ...defaultTheme.screens };
+
+delete containerScreens["2xl"];
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,html}"],
   theme: {
     container: {
+      screens: containerScreens,
       center: true,
       padding: "1rem",
     },
