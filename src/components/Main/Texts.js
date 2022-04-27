@@ -2,8 +2,11 @@ import React from "react";
 
 const Texts = () => {
   return (
-    <div className="px-4 text-center flex flex-col items-center gap-5">
-      <h1 className="text-3xl font-bold">Make remote work</h1>
+    <div
+      className="px-4 text-center flex flex-col items-center gap-5
+                w-1/2 sm:-order-1 sm:text-left sm:items-start"
+    >
+      <h1 className="text-3xl font-bold sm:text-6xl">Make remote work</h1>
       <p className="text-medium-grey text-base">
         Get your team is sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
